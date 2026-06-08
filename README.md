@@ -1,5 +1,16 @@
 # Capacitor Speech Recognition Plugin
 
+> **⚠️ Fork Notice**
+>
+> This is a fork of [@capacitor-community/speech-recognition](https://github.com/capacitor-community/speech-recognition) with added **Swift Package Manager (SPM)** support for Capacitor 7+ projects that have migrated away from CocoaPods.
+>
+> - **Upstream:** https://github.com/capacitor-community/speech-recognition
+> - **Upstream PR:** pending (will be linked here once submitted)
+> - **Maintained by:** [@JoniJansen](https://github.com/JoniJansen) for the [Soulvay](https://soulvay.com) iOS/Android build.
+> - **Goal:** Merge SPM support back upstream — this fork is intended as a temporary bridge.
+>
+> All other functionality is identical to upstream. Issues unrelated to SPM should be reported on the upstream repository.
+
 Capacitor community plugin for speech recognition.
 
 ## Maintainers
@@ -30,6 +41,26 @@ Sync native files
 ```bash
 npx cap sync
 ```
+
+### Swift Package Manager (Capacitor 7+ with SPM)
+
+If your Capacitor project uses Swift Package Manager instead of CocoaPods (see [Capacitor SPM migration](https://capacitorjs.com/docs/ios/spm)), install this fork directly from GitHub:
+
+```bash
+npm install github:JoniJansen/capacitor-speech-recognition-spm#v7.0.1-spm.1
+npx cap sync ios
+```
+
+Or with `bun`:
+
+```bash
+bun add github:JoniJansen/capacitor-speech-recognition-spm#v7.0.1-spm.1
+npx cap sync ios
+```
+
+`npx cap sync ios` will detect the `Package.swift` and add the plugin as a Swift Package dependency to your `CapApp-SPM/Package.swift` automatically.
+
+**Android installation is unchanged** — Gradle picks up the plugin the same way as the upstream package.
 
 ## iOS
 
