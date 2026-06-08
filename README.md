@@ -9,7 +9,9 @@
 > - **Maintained by:** [@JoniJansen](https://github.com/JoniJansen) for the [Soulvay](https://soulvay.com) iOS/Android build.
 > - **Goal:** Merge SPM support back upstream — this fork is intended as a temporary bridge.
 >
-> All other functionality is identical to upstream. Issues unrelated to SPM should be reported on the upstream repository.
+> **Note** — Since `v7.0.1-spm.2`, this fork uses the **Pure-Swift `CAPBridgedPlugin` pattern** (Capacitor 6+). `Plugin.m` and `Plugin.h` have been removed, plugin registration moved into `Plugin.swift`. This is a structural divergence from upstream — upstream PR is unlikely to merge as-is. Issue requesting SPM support on upstream is the recommended path; this fork remains as a Soulvay-maintained bridge until then.
+>
+> All other plugin functionality is identical to upstream. Issues unrelated to SPM should be reported on the upstream repository.
 
 Capacitor community plugin for speech recognition.
 

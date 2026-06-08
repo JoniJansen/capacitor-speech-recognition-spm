@@ -3,7 +3,22 @@ import Capacitor
 import Speech
 
 @objc(SpeechRecognition)
-public class SpeechRecognition: CAPPlugin {
+public class SpeechRecognition: CAPPlugin, CAPBridgedPlugin {
+    public let identifier = "SpeechRecognition"
+    public let jsName = "SpeechRecognition"
+    public let pluginMethods: [CAPPluginMethod] = [
+        CAPPluginMethod(name: "available", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "start", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "stop", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "getSupportedLanguages", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "hasPermission", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "isListening", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "requestPermission", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "checkPermissions", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "requestPermissions", returnType: CAPPluginReturnPromise),
+        CAPPluginMethod(name: "removeAllListeners", returnType: CAPPluginReturnPromise)
+    ]
+
 
     let defaultMatches = 5
     let messageMissingPermission = "Missing permission"
