@@ -45,7 +45,6 @@
     "clean": "rimraf ./dist",
     "watch": "tsc --watch",
     "prepublishOnly": "npm run build",
-    "prepare": "npm run build",
     "release": "commit-and-tag-version"
   },
   "devDependencies": {
