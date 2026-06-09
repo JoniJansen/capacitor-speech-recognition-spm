@@ -13,7 +13,7 @@ let package = Package(
     dependencies: [
         .package(
             url: "https://github.com/ionic-team/capacitor-swift-pm.git",
-            from: "7.0.0"
+            from: "8.0.0"
         )
     ],
     targets: [
@@ -24,7 +24,7 @@ let package = Package(
                 .product(name: "Cordova", package: "capacitor-swift-pm")
             ],
             path: "ios/Plugin",
-            exclude: ["Info.plist", "Plugin.h", "Plugin.m"],
+            exclude: ["Info.plist"],
             sources: ["Plugin.swift"]
         )
     ]
